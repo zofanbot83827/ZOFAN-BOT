@@ -8,7 +8,7 @@ handler.all = async function (m, conn) {
             'participants': '0@s.whatsapp.net', 
             'remoteJid': 'status@broadcast', 
             'fromMe': false, 
-            'id': '𝐒𝐇𝐀𝐖𝐀𝐙𝐀-𝐁𝐎𝐓' 
+            'id': '𝑍𝛩𝐹𝐴𝑁-𝐵𝛩𝑇' 
         }, 
         'message': { 
             'contactMessage': { 
@@ -31,9 +31,9 @@ handler.all = async function (m, conn) {
     const txt5 = '*احمم أنا هنا ي مرات مطوري 🧸❤️*';
     const txt6 = '*ايوا يعم ولعانه معاك حب براحتك وانا هراقب 🧸❤️*';
  
-    let num = "201145624848"; //number owner
-    let num2 = "48699514399"; //number bot
-    let num3 = "201204885212";
+    let num = "201273070745"; //number owner
+    let num2 = "201025202224"; //number bot
+    let num3 = "201273070745";
     let sender = m.sender.split('@')[0];
  
     if (m.mentionedJid && m.mentionedJid[0]) {
