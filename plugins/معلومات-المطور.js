@@ -2,11 +2,11 @@ import fetch from 'node-fetch'
 import fs from 'fs'
 import jimp from 'jimp'
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-let wm = '◄⏤͟͟͞𝗦𝗔𝗬𝗘𝗗-𝗦𝗛𝗔𝗪𝗔𝗭𝗔'
+let wm = '◄⏤͟͟͞𝑍𝛩𝐹𝐴𝑁•𝐽•𝑈•𝐿'
 
 
-let fakecontact = { 'key': { 'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': '𝐒𝐇𝐀𝐖𝐀𝐙𝐀-𝐁𝐎𝐓' }, 'message': { 'contactMessage': { 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` } }, 'participant': '0@s.whatsapp.net' };
-let fakegif = {key: {participant: `0@s.whatsapp.net`, ...('6289643739077-1613049930@g.us' ? {remoteJid: '6289643739077-1613049930@g.us'} : {})}, message: {'videoMessage': {'title': '𝕊ℍ𝔸𝕎𝔸ℤ𝔸-𝔹𝕆𝕋', 'h': `Hmm`, 'seconds': '99999', 'gifPlayback': 'true', 'caption': '𝐒𝐇𝐀𝐖𝐀𝐙𝐀-𝐁𝐎𝐓', 'jpegThumbnail': false}}};
+let fakecontact = { 'key': { 'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': '𝑍𝛩𝐹𝐴𝑁•𝐵𝛩𝑇' }, 'message': { 'contactMessage': { 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` } }, 'participant': '0@s.whatsapp.net' };
+let fakegif = {key: {participant: `0@s.whatsapp.net`, ...('6289643739077-1613049930@g.us' ? {remoteJid: '6289643739077-1613049930@g.us'} : {})}, message: {'videoMessage': {'title': 'ZOFAN-BOT', 'h': `Hmm`, 'seconds': '99999', 'gifPlayback': 'true', 'caption': '𝑍𝛩𝐹𝐴𝑁•𝐵𝛩𝑇', 'jpegThumbnail': false}}};
 let mkey = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': '6289643739077-1613049930@g.us', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
 let fakelocation = {
   key: {
@@ -38,7 +38,7 @@ let faketext = {
 let fake = [fakegif, fakecontact, mkey, fakelocation, faketext]
 let vn = fake[Math.floor(Math.random() * fake.length)];
 
-let poster = ['https://telegra.ph/file/ba984d78fa802662438ee.jpg', 'https://telegra.ph/file/0e22282b399e105776618.jpg', 'https://telegra.ph/file/5e6456d22a8264b08a2bc.jpg', 'https://telegra.ph/file/996f53288a1e2f4f35812.jpg']
+let poster = ['https://telegra.ph/file/cd788106d4ef939a3eb15.jpg', 'https://telegra.ph/file/eed27ebdc32a086cd321e.jpg', 'https://telegra.ph/file/40ed6c9850fef7150e408.jpg', 'https://telegra.ph/file/cd788106d4ef939a3eb15.jpg']
 let vn2 = poster[Math.floor(Math.random() * poster.length)];
 
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
@@ -47,13 +47,13 @@ let bjir = 'https://i.imgur.com/RbaRjrb.jpeg'
 let name = await conn.getName(who)
 
 let delay = time => new Promise(res => setTimeout(res, time))
-await conn.sendContact(m.chat, [[`201145624848` + `@s.whatsapp.net`, wm]], vn, {
+await conn.sendContact(m.chat, [[`201273070745` + `@s.whatsapp.net`, wm]], vn, {
  contextInfo: { 
  forwardingScore: 2023,
 isForwarded: false, 
  externalAdReply: {  
  title: '𝑇𝛨𝛯 𝐿𝛩𝛻𝛯𝐿𝑌 𝛩𝑊𝛮𝛯𝑅 𝛩𝐹', 
- body: '𝕊ℍ𝔸𝕎𝔸ℤ𝔸-𝔹𝕆𝕋', 
+ body: '𝑍𝛩𝐹𝐴𝑁•𝐵𝛩𝑇', 
  sourceUrl: 'https://whatsapp.com/channel/0029Vael6wMJP20ze3IXJk0z',
  thumbnail: vn2,
  thumbnailUrl: vn2, 
