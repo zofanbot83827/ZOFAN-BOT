@@ -5,7 +5,7 @@ export async function before(m, {conn, participants}) {
   if (!m.messageStubType || !m.isGroup) return !0;
   const groupName = (await conn.groupMetadata(m.chat)).subject;
   const groupAdmins = participants.filter((p) => p.admin);
-  const pp = await conn.profilePictureUrl(m.chat, 'image').catch((_) => null) || 'https://telegra.ph/file/e85649fe62814c6e15d71.jpg';
+  const pp = await conn.profilePictureUrl(m.chat, 'image').catch((_) => null) || 'https://telegra.ph/file/bebf3614d92a554f4a168.jpg';
   const img = await (await fetch(pp)).buffer();
   const chat = global.db.data.chats[m.chat];
   const mentionsString = [m.sender, m.messageStubParameters[0], ...groupAdmins.map((v) => v.id)];
