@@ -354,6 +354,18 @@ case 'antiprivate':
       bot.antiPrivate = isEnable
       break
       
+      case 'autoban':
+      isBot = true
+      if (!isOwner) {
+        global.dfail('owner', m, conn)
+        throw false
+      } else if (!isROwner) {
+        global.dfail('rowner', m, conn)
+        throw false
+      }
+      bot.autoBan = isEnable
+      break
+      
       case 'autodownload':
       isBot = true
       if (!isOwner) {
@@ -425,6 +437,7 @@ case 'antiprivate':
 ⛊ modejadibot
 ⛊ grouponly
 ⛊ autotype
+⛊ autoban
 ⛊ autoread
 ⛊ autostatus
 ⛊ antiPrivate
@@ -450,4 +463,3 @@ handler.tags = ['config']
 handler.command = /^(تفعيل|تعطيل|(en|dis)able|(turn)?o(n|ff)|[01])$/i
 
 export default handler
-
