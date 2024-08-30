@@ -1,10 +1,10 @@
 /*
 ╮────────────────────────╭ـ
-│ By : 𝗦𝗔𝗬𝗘𝗗-𝗦𝗛𝗔𝗪𝗔𝗭𝗔 🧞
-│ Number : https://wa.me/201145624848
-│ Community : https://chat.whatsapp.com/Hg4F5jQ9Z9r1lUH6I1jkhI
-│ Group Support : https://chat.whatsapp.com/JGtNRFwfHJC8XholdKmVGS
-│ Chanel : https://whatsapp.com/channel/0029Vael6wMJP20ze3IXJk0z
+│ By : 𝑍𝛩𝐹𝐴𝑁 🧞
+│ Number : https://wa.me/201273070745
+│ Community : https://chat.whatsapp.com/KiLqYWL2ojx6E5lzAUomzG
+│ Group Support : https://chat.whatsapp.com/Kkz5bqWO572C3QgkhL0hfA
+│ Chanel : https://whatsapp.com/channel/0029VamcGDO9hXF3tRB8LX11
 ╯────────────────────────╰ـ 
 */
 
