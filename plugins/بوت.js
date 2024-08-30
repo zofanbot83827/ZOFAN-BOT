@@ -22,7 +22,7 @@ global.reply = {
     conn.sendFile(m.chat, 'https://telegra.ph/file/b1b1f66e3a16652c9d66a.mp4','image.jpg', message, global.reply, m, { mentions: [m.sender] });
 };
 
-handler.customPrefix = /^(تست)$/i;
+handler.customPrefix = /^(زوفان)$/i;
 handler.command = new RegExp;
 
 export default handler;
