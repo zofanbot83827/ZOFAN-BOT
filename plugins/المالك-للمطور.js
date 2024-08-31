@@ -8,7 +8,7 @@ let handler = async (m, { conn, text }) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
   
-  let teks = `*⟥•════─━⋄❲ ❳⋄━─════•⟤*\n*┊المرسل : @${who.split`@`[0]}*\n*┊الرسالة :*\n> *${text}\n*⟥•════─━⋄❲ ❳⋄━─════•⟤*`;
+  let teks = `*⟥•════─━⋄❲❄️❳⋄━─════•⟤*\n*┊المرسل : @${who.split`@`[0]}*\n*┊الرسالة :*\n> *${text}\n*⟥•════─━⋄❲❄️❳⋄━─════•⟤*`;
   
   const me = '201273070745@s.whatsapp.net';
   
