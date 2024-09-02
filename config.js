@@ -15,15 +15,15 @@ global.isBaileysFail = false
 
 global.owner = [
   ['201273070745', '𝑍𝛩𝐹𝐴𝑁', true],
-  ['201225784766','𝑀𝐴𝐼𝐾𝑌', true]
+  ['201145624848','𝑀𝐴𝐼𝐾𝑌', true]
 ];
 
 global.ownername = '𝑍𝛩𝐹𝐴𝑁-𝑀𝐷';
 global.ownernumber = '201273070745';
 global.myid = '201273070745@s.whatsapp.net';
   
-global.suittag = ['201273070745', '201225784766'];
-global.prems = ['201273070745', '201225784766'];
+global.suittag = ['201273070745', '201145624848'];
+global.prems = ['201273070745', '201145624848'];
 
 global.packname = '𝑍𝛩𝐹𝐴𝑁-𝑀𝐷';
 global.author = '𝑍𝛩𝐹𝐴𝑁•𝐵𝛩𝑇';
