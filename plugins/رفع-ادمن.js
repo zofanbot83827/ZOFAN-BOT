@@ -42,7 +42,7 @@ const handler = async (m, { conn, usedPrefix, text }) => {
   }
 };
 
-handler.help = ['*201203024198*', '*@اسم المستخدم*', '*محادثة المستجيب*'].map(v => 'promote ' + v);
+handler.help = ['*201273070745*', '*@اسم المستخدم*', '*محادثة المستجيب*'].map(v => 'promote ' + v);
 handler.tags = ['group'];
 handler.command = /^(ترقية|ترقيه|رفع|ارفعو|رول)$/i;
 handler.group = true;
