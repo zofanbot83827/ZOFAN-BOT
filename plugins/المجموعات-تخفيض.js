@@ -42,7 +42,7 @@ const handler = async (m, { conn, usedPrefix, text }) => {
   }
 };
 
-handler.help = ['*201203024198*', '*@اسم المستخدم*', '*محادثة المستجيب*'].map(v => 'demote ' + v);
+handler.help = ['*201273070745*', '*@اسم المستخدم*', '*محادثة المستجيب*'].map(v => 'demote ' + v);
 handler.tags = ['group'];
 handler.command = /^(خفض|تخفيض|تنزيل|نزّل)$/i;
 handler.group = true;
