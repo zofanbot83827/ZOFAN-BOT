@@ -1,41 +1,53 @@
+const handler = async (m, { conn, usedPrefix, text }) => {
+  let number;
 
-
-const handler = async (m, {conn, usedPrefix, text}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.gc_demote
-
-  if (isNaN(text) && !text.match(/@/g)) {
-
-  } else if (isNaN(text)) {
-    var number = text.split`@`[1];
-  } else if (!isNaN(text)) {
-    var number = text;
+  // استخراج الرقم أو المستخدم بناءً على الإدخال
+  if (text) {
+    number = isNaN(text) && text.includes('@') ? text.split('@')[1] : text;
+  } else if (m.quoted) {
+    number = m.quoted.sender.split('@')[0];
+  } else if (m.mentionedJid && m.mentionedJid.length > 0) {
+    number = m.mentionedJid[0].split('@')[0];
   }
 
-  if (!text && !m.quoted) return conn.reply(m.chat, `${tradutor.texto1[0]} ${usedPrefix}quitaradmin @tag*\n*┠≽ ${usedPrefix}quitaradmin ${tradutor.texto1[1]}`, m);
-  if (number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, tradutor.texto2, m);
+  // التحقق من وجود الرقم وصحته
+  if (!number) {
+    return conn.reply(m.chat, `*[❗] الاستخدام المناسب*\n\n*┯┷*\n*┠≽ ${usedPrefix}خفض مشرف @منشن*\n*┠≽ ${usedPrefix}خفض مشرف -> الرد على الرسالة*\n*┷┯*`, m);
+  }
+
+  if (number.length > 13 || number.length < 11) {
+    return conn.reply(m.chat, `*[ ⚠️ ] الرقم الذي تم إدخاله غير صحيح، الرجاء إدخال الرقم الصحيح*`, m);
+  }
+
+  const user = `${number}@s.whatsapp.net`;
+
+  // التحقق مما إذا كان الشخص مشرف بالفعل
+  const groupMetadata = await conn.groupMetadata(m.chat);
+  const participant = groupMetadata.participants.find(participant => participant.id === user);
+
+  if (!participant || (participant.admin !== 'admin' && participant.admin !== 'superadmin')) {
+    return conn.reply(m.chat, `*هذا الشخص ليس مشرفًا بالفعل*`, m);
+  }
 
   try {
-    if (text) {
-      var user = number + '@s.whatsapp.net';
-    } else if (m.quoted.sender) {
-      var user = m.quoted.sender;
-    } else if (m.mentionedJid) {
-      var user = number + '@s.whatsapp.net';
-    }
+    // خفض مستوى الشخص من مشرف إلى عضو
+    await conn.groupParticipantsUpdate(m.chat, [user], 'demote');
+    await conn.sendMessage(m.chat, {
+      text: `بيان خفض عضو من مشرف\nالعضو: @${number}\nالمسؤول: @${m.sender.split('@')[0]}\nتم الخفض بواسطة : @${conn.user.jid.split('@')[0]}`,
+      mentions: [user, m.sender, conn.user.jid]
+    }, { quoted: m });
+
   } catch (e) {
-  } finally {
-    conn.groupParticipantsUpdate(m.chat, [user], 'demote');
-    conn.reply(m.chat, tradutor.texto3, m);
+    console.error(e);
   }
 };
-handler.help = ['*593xxx*', '*@usuario*', '*responder chat*'].map((v) => 'demote ' + v);
+
+handler.help = ['*201203024198*', '*@اسم المستخدم*', '*محادثة المستجيب*'].map(v => 'demote ' + v);
 handler.tags = ['group'];
-handler.command = /^(demote|تخفيض)$/i;
+handler.command = /^(خفض|تخفيض|تنزيل|نزّل)$/i;
 handler.group = true;
 handler.admin = true;
 handler.botAdmin = true;
 handler.fail = null;
+
 export default handler;
