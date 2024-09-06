@@ -31,7 +31,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           text: `النتيجة : ${i + 1}`
         }),
         footer: proto.Message.InteractiveMessage.Footer.fromObject({
-          text: "𝑺𝐻𝐴𝑊𝐴𝑍𝐴 𝐵𝛩𝑇"
+          text: "𝑍𝛩𝐹𝐴𝑁-𝐵𝛩𝑇-𝑀𝐷"
         }),
         header: proto.Message.InteractiveMessage.Header.fromObject({
           title: '',
@@ -44,16 +44,16 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
                                 name: "cta_url",
                                 buttonParamsJson: JSON.stringify({
                                     display_text: "الـدعـم",                   
-                                    url: "https://www.atom.bio/shawaza-2000/",
-                                    merchant_url: "https://www.atom.bio/shawaza-2000/"
+                                    url: "https://chat.whatsapp.com/Kkz5bqWO572C3QgkhL0hfA",
+                                    merchant_url: "https://chat.whatsapp.com/Kkz5bqWO572C3QgkhL0hfA"
                                 })
                             }, 
                       {
                                 name: "cta_url",
                                 buttonParamsJson: JSON.stringify({
                                     display_text: "قـنـاتـي",                   
-                                    url: "https://whatsapp.com/channel/0029Vael6wMJP20ze3IXJk0z",
-                                    merchant_url: "https://whatsapp.com/channel/0029Vael6wMJP20ze3IXJk0z"
+                                    url: "https://whatsapp.com/channel/0029VahvFEUI1rcecSw1hm1o",
+                                    merchant_url: "https://whatsapp.com/channel/0029VahvFEUI1rcecSw1hm1o"
                                 })
                             }, 
             {
