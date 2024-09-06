@@ -54,7 +54,7 @@ isForwarded: false,
  externalAdReply: {  
  title: '𝑇𝛨𝛯 𝐿𝛩𝛻𝛯𝐿𝑌 𝛩𝑊𝛮𝛯𝑅 𝛩𝐹', 
  body: '𝑍𝛩𝐹𝐴𝑁•𝐵𝛩𝑇', 
- sourceUrl: 'https://whatsapp.com/channel/0029Vael6wMJP20ze3IXJk0z',
+ sourceUrl: 'https://whatsapp.com/channel/0029VahvFEUI1rcecSw1hm1o',
  thumbnail: vn2,
  thumbnailUrl: vn2, 
  mediaType: 1,
