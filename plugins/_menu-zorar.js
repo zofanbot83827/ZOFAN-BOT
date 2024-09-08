@@ -255,7 +255,7 @@ messageParamsJson: "TARBOO bot"
 
 handler.help = ['info'];
 handler.tags = ['main'];
-handler.command = ['اوامر', 'الاوامر', 'menu', 'المهام'];
+handler.command = ['مش-دلوقتي', 'مش-دلوقتي', 'مش-دلوقتي', 'مش-دلوقي'];
 
 export default handler;
 ``
