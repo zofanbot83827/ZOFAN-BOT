@@ -14,16 +14,16 @@ global.authFile = `MysticSession`;
 global.isBaileysFail = false
 
 global.owner = [
-  ['201225784766', '𝑍𝛩𝐹𝐴𝑁', true],
-  ['201225784766','𝑀𝐴𝐼𝐾𝑌', true]
+  ['201225784766', '𝑀𝐴𝐼𝐾𝑌', true],
+  ['201225655220','✪┋❥ 𝐓𝐀𝐑𝐁𝐎𝐎┋✪', true]
 ];
 
 global.ownername = '𝑍𝛩𝐹𝐴𝑁-𝑀𝐷';
 global.ownernumber = '201273070745';
 global.myid = '201225784766@s.whatsapp.net';
   
-global.suittag = ['201225784766', ''];
-global.prems = ['201225784766', ''];
+global.suittag = ['201225784766', '201225655220'];
+global.prems = ['201225784766', '201225655220'];
 
 global.packname = '𝑍𝛩𝐹𝐴𝑁-𝑀𝐷';
 global.author = '𝑍𝛩𝐹𝐴𝑁•𝐵𝛩𝑇';
