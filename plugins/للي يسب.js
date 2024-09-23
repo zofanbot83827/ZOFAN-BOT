@@ -1,4 +1,4 @@
-const isToxic = /^(زب|سكس|طيز|كس|خول|عرص|متناك|xnxx|xxx|عرص|كسمك|مخولن|خولنه|يلعن|fuk|متناك|متناكه|خرا|طيز|كوس|نيك|هنيكك|طيز|حب|بحب|كراش|معرص)$/i;
+const isToxic = /^( مص|مص مص|سكس|طيز|كس|خول|عرص|متناك|xnxx|xxx|عرص|كسمك|مخولن|خولنه|يلعن|fuk|متناك|متناكه|خرا|طيز|كوس|نيك|هنيكك|طيز|حب|بحب|كراش|معرص)$/i;
 
 import axios from "axios"
 import fetch from "node-fetch"
@@ -29,7 +29,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             "خخخ م تحترم نفسك!",
             "عيب الكلام دا ي شباب والله!",
             "فين الادمن يطردوه او يعطوه انذار!",
-            "يخول امتا هتكبر.",
+            "ياغبي امتا هتكبر.",
             "احترم نفسك ياعم انت في جروب محترم"
         ];
 
@@ -51,7 +51,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
 
         var caption = `*[ الكلام الزفت ]*\n\n${toxicityLevels[toxicityIndex]}\n${toxicityVerdict[toxicityIndex]}\n`
 
-        await this.reply(m.chat, `*في كلام زي الزفت اتقال!*\n ${caption} ${isBotAdmin ? '' : '\n\n_عايز اشراف اطرد ابن المرا_'}`, m)
+        await this.reply(m.chat, `*في كلام زي الزفت اتقال!*\n ${caption} ${isBotAdmin ? '' : '\n\n_ عايز اشراف اطردا_'}`, m)
 
         if (isBotAdmin) {
             // Remove the participant from the group
