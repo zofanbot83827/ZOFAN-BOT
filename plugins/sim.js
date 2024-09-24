@@ -6,14 +6,12 @@ handler.all = async function(m) {
   let text = m.text;
   const chat = global.db.data.chats[m.chat];
   
-  // التحقق من النصوص التي يجب تجاهلها
   if (m.text.includes('gps') || m.text.includes('باتش') || m.text.includes('رستر') || m.text.includes('on') || m.text.includes('off') || m.text.includes('gpd')) return true;
   
   if (!chat.isBanned && chat.chatbot) {
     conn.sendPresenceUpdate('composing', m.chat);
 
     try {
-      // استخدام واجهة API الجديدة فقط
       const apiResponse = await fetch(`https://chatbot-ji1z.onrender.com/chatbot-ji1z`, {
         method: "POST",
         headers: {
@@ -21,7 +19,7 @@ handler.all = async function(m) {
         },
         body: JSON.stringify({
           messages: [
-            { role: 'system', content: 'You are a helpful assistant. Reply in Egyptian Arabic dialect.' },
+            { role: 'system', content: 'إنت اسـمك "𝑍𝛩𝐹𝐴𝑁"، اتكلم باللهجة المصرية وهزر اكنك بتكلم صحابك وبطريقة السرسجيه وخلي في شتايم مصرية في بعض الردود اذا كان حد بيشتم و ضيف إيموجي مع ردودك وانت مش مساعد ذكي انت فقط الدردشة والتسلية' },
             { role: 'user', content: text },
           ],
         }),
@@ -30,11 +28,11 @@ handler.all = async function(m) {
       const aiResponse = await apiResponse.json();
       
       conn.sendPresenceUpdate(null, m.chat);
-      m.reply(aiResponse.choices[0].message.content); // عرض الرد من واجهة API الجديدة
+      m.reply(aiResponse.choices[0].message.content);
       
     } catch (error) {
       console.error('Error with AI API:', error);
-      m.reply('حدث خطأ أثناء الاتصال بخدمة الذكاء الاصطناعي.');
+      m.reply('فيه مشكلة حصلت، حاول تاني بعد شوية! 😅');
     }
   }
   
